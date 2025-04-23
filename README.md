@@ -1,2 +1,1 @@
-# la-theorie-combinatoire-de-licosaedre
-La théorie combinatoire de l'Icosaèdre
+### La théorie combinatoire de l'Icosaèdre
