@@ -5,11 +5,60 @@
 \section*{}
 
 %%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{I.}\label{sec:1}%
 \addcontentsline{toc}{section}{I.}
 
+{
+Définition I.1. --- \it Soient $S$ un ensemble fini, $A$ une partie de $\mathfrak{P}_2(S)$, mais $A$ différent de $\mathfrak{P}_2(S)$, $F$ une partie de $\mathfrak{P}_3(S)$ satisfaisant les conditions suivantes~:
+\begin{enumerate}
+    \item[I] $\forall s \in S \quad \operatorname{card}\{ s' \in S | \{s, s' \} \in A \} = 5$,
+    \item[II] $\forall a \in A \quad \operatorname{card}\{ f \in F | a \subset f \} = 2$,
+    \item[III] soient $f \in F, s, s' \in f \quad \Rightarrow \quad \{s, s'\} \in A$,
+    \item[IV] soient $ s,s' \in S \quad \Rightarrow \quad \exists$ une suite $s = s_0, s_1, \dots, s_n = s'$ dans $S$ telle que $\{s_i, s_{i - 1}\} \in A \ \ \forall i \in \{i,\dots,n \}$.
+\end{enumerate}
+Les relations d'incidence $R, R', R''$ sont définies par les relations d'inclusion.
+
+On appelle $\Pi = (S, A, F, R, R', R'')$ un \textup{icosaèdre}.
+}
 \vskip .3cm
-{\bf I.1.}
+{
+Proposition I.2. --- \it L'icosaèdre est un polyèdre combinatoire, connexe.\footnote{Référence~: certificat de stage de Bernard Roys}     
+}
+\vskip .3cm
+Démonstration. --- 
+\begin{enumerate}
+    \item $\forall a \in A$ est condition que $\operatorname{card}\{ s \in S \mid (s,a) \in R' \} = 2$ car $A \subset \mathcal{P}_2(S)$
+    \item $\forall a \in A$ est condition que $\operatorname{card}\{ f \in F \mid (a,f) \in R'' \} = 2$ à cause de II
+    \item $\forall (s,f) \in R$ est condition que $\operatorname{card}\{ a \in A \mid (s,a) \in R' \land (a,f) \in R'' \} = 2$ à cause de III
+    \item Soit $f \in F$ alors $\bigl( s(f),\ A(f),\ R''(f) \bigr)$ est un triangle donc un polygone combinatoire
+    \item Soit $s \in S$ alors $\bigl( A(s),\ F(s),\ R''(s) \bigr)$ a la structure d'un pentagone.
+\end{enumerate}
+\vskip .3cm
+{
+Théorème I.3. --- \it L'icosaèdre est un polyèdre combinatoire, régulier et tous les icosaèdres sont isomorphes.
+}
+\vskip .3cm
+Démonstration. --- Soient $\Pi, \Pi'$ deux icosaèdres, $r = (s,a,f)$ et $r' = (s',a',f')$ et $\operatorname{Rep}(\Pi\Pi')$. On va démontrer qu'il y a un unique isomorphisme $\varphi$ de polyèdres combinatoires de $\Pi$ sur $\Pi'$, tel que $\varphi(r) = r'$.
+
+Ce qui montre que tous les icosaèdres sont isomorphes et par $\Pi \cong \Pi'$ ça montre que $\Pi$ est un polyèdre régulier (i.e. le groupe $G = \operatorname{Aut}(\Pi)$ des automorphismes de $\Pi$ opère transitivement sur $E = \operatorname{Rep}(\Pi)$).
+
+Le repère $r = (s, a, f)$ détermine un pentagone $P_s$ autour du sommet $s$~:
+
+%%%%
+
+Pour chaque arête $ai$, il y a une deuxième face $gi$ qui est incidente à $ai$. Soit $ti$ la troisième sommet de $gi$ qui n'est pas incident à $ai$.
+
+%%%%
+
+On trouve que $s_i \neq t_j \quad \forall (i,j)$, car soit $s_i = t_j$ pour un $(i,j)$ nécessairement $i \neq j$, de plus on trouve que $s_i = t_i \quad \forall i \in \{1,\dots,5\}$, mais dans ce cas-là il y a $A \neq \mathcal{P}_2(S)$, ce qu'on a exclu.
+
+Comme il y a une structure pentagonale autour de chaque sommet $s_i$, l'ensemble $\{t_j, t_{j+1}\}$ forme une arête $\forall j \in \{1,\dots,5\}$, de même l'ensemble $\{t_5, t_1\}$ forme une arête.
+
+Pour chaque $t_i$ il y a encore une seule cinquième arête $b_i$ qui est incidente à $t_i$. Donc tous les $t_i$ sont différents l'un de l'autre et toutes les arêtes $b_i$ sont incidentes au même sommet $\{ \infty \}$.
+
+
+
+
+
 
 
 
@@ -41,6 +90,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{VI. Construction d'un icosaèdre en termes d'un ensemble à 5 éléments}\label{sec:6}%
 \addcontentsline{toc}{section}{VI. Construction d'un icosaèdre en termes d'un ensemble à 5 éléments}
+
+
+
 
 
 
