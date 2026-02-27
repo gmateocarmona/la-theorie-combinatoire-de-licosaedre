@@ -43,7 +43,39 @@ Ce qui montre que tous les icosaèdres sont isomorphes et par $\Pi \cong \Pi'$ �
 
 Le repère $r = (s, a, f)$ détermine un pentagone $P_s$ autour du sommet $s$~:
 
-%%%%
+\begin{center}
+\begin{tikzpicture}[scale=2.2,line join=round,line cap=round]
+
+\def\R{1}
+
+\foreach \k in {1,...,5}{
+    \coordinate (s\k) at ({90+72*(\k-1)}:\R);
+}
+
+\coordinate (s0) at (s5);
+\coordinate (c) at (0,0);
+
+\draw (s1)--(s2) node[midway,above right] {$a_4$};
+\draw (s2)--(s3) node[midway,right] {$a_8$};
+\draw (s3)--(s4) node[midway,below right] {$a_1$};
+\draw (s4)--(s0) node[midway,below left] {$a_2$};
+\draw (s0)--(s1) node[midway,left] {$a_3$};
+
+\draw (c)--(s1) node[midway,left] {$h_4$};
+\draw (c)--(s2);
+\draw (c)--(s3) node[midway,right] {$h_1$};
+\draw (c)--(s4) node[midway,below] {$h_2$};
+\draw (c)--(s0) node[midway,left] {$h_3$};
+
+\node[above] at (s1) {$s_1$};
+\node[right] at (s2) {$s_2$};
+\node[right] at (s3) {$s_3$};
+\node[below] at (s4) {$s_4$};
+\node[left] at (s0) {$s_0$};
+\node at (c) {$3$};
+
+\end{tikzpicture}
+\end{center}
 
 Pour chaque arête $ai$, il y a une deuxième face $gi$ qui est incidente à $ai$. Soit $ti$ la troisième sommet de $gi$ qui n'est pas incident à $ai$.
 
@@ -96,9 +128,6 @@ qui sont injectifs.
 %%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{VI. Construction d'un icosaèdre en termes d'un ensemble à 5 éléments}\label{sec:6}%
 \addcontentsline{toc}{section}{VI. Construction d'un icosaèdre en termes d'un ensemble à 5 éléments}
-
-
-
 
 
 
