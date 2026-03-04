@@ -87,16 +87,48 @@ Comme il y a une structure pentagonale autour de chaque sommet $s_i$, l'ensemble
 
 Pour chaque $t_i$ il y a encore une seule cinquième arête $b_i$ qui est incidente à $t_i$. Donc tous les $t_i$ sont différents l'un de l'autre et toutes les arêtes $b_i$ sont incidentes au même sommet $\{ \infty \}$.
 
+À cause de la propriété de la connexité, les seuls sommets sont~: $\{ s, s_0, \dots, s_4, t_0, \dots, t_4, \infty \}$
+
 %%
 
+Alors l'unique isomorphisme $g \in \operatorname{Isom}(\Pi, \Pi')$ qui transforme un repère $r \in \operatorname{Rep}(\Pi)$ en $r' \in \operatorname{Rep}(\Pi')$ est l'isomorphisme qui est défini par~:
+\[
+g : \Pi \isommap \Pi'
+\]
+\[
+\begin{aligned}
+s &\longmapsto s' \\
+s_i &\longmapsto s_i' \\
+t_i &\longmapsto t_i' \\
+\infty &\longmapsto \infty'
+\end{aligned}
+\]
 \vskip .3cm
 {
-Proposition I.4. --- \it Soit   
+Proposition I.4. --- \it Soit $\Pi = (S, A, F, R, R', R'')$ un icosaèdre alors
+\begin{itemize}
+    \item[i.)] $\operatorname{card} S = 12$
+    \item[ii.)] $\operatorname{card} A = 30$
+    \item[iii.)] $\operatorname{card} F = 20$
+    \item[iv.)] $\operatorname{card} \operatorname{Rep}(\Pi) = \operatorname{card } \operatorname{Aut}(\Pi) = 120$
+\end{itemize} 
 }
 \vskip .3cm
-Démonstration. ---
-
-
+Démonstration. --- \begin{itemize}
+    \item[i.)] trivial
+    \item[ii.)] $\operatorname{card}(A(s)) = 5$ et $\operatorname{card} S(a) = 2$
+    \item[iii.)] $\operatorname{card} F(a) = 2$ et $\operatorname{card} A(f) = 3$
+    \item[iv.)] $\Pi$ est régulier $\Rightarrow \operatorname{card} \operatorname{Rep}(\Pi) = \operatorname{card} \operatorname{Aut}(\Pi)$
+\end{itemize}
+Grâce à la bijection canonique
+\[
+\{(s, s', s'') \in S \times S \times S \mid \{s, s', s''\} \in F\} \xrightarrow{\sim} \operatorname{Rep} \Pi
+\]
+\[
+(s, s', s'') \longmapsto (s, \{s, s'\}, \{s, s', s''\})
+\]
+$\operatorname{card} \operatorname{Rep}(\Pi)$ est égal à $6$ fois $\operatorname{card} F$ \\
+$\Rightarrow \operatorname{card} \operatorname{Rep}(\Pi) = 6 \cdot 20 = 120$
 
 %%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{II. Distance combinatoire}\label{sec:2}%
@@ -128,6 +160,9 @@ qui sont injectifs.
 %%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{VI. Construction d'un icosaèdre en termes d'un ensemble à 5 éléments}\label{sec:6}%
 \addcontentsline{toc}{section}{VI. Construction d'un icosaèdre en termes d'un ensemble à 5 éléments}
+
+
+
 
 
 
